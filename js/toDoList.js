@@ -7,9 +7,11 @@ function toDoDelete(ev) {
   const btn = ev.target;
   const li = btn.parentNode;
   toDoText.removeChild(li);
-  const cleanToDo = toDos.filter(function (todo) {
+
+  const cleanToDo = toDos.filter((todo) => {
     return todo.id !== parseInt(li.id);
   });
+
   toDos = cleanToDo;
   saveToDo();
 }
