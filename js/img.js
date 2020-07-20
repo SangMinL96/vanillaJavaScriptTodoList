@@ -1,7 +1,7 @@
 const imge = document.querySelector("body");
 const imgNumber = 3;
 
-function imgChage(img) {
+function imgChange(img) {
   const image = new Image();
   image.src = `img/${img + 1}.jpg`;
   imge.appendChild(image);
@@ -15,7 +15,7 @@ function random() {
 function init() {
   const randomNumber = random();
 
-  imgChage(randomNumber);
+  imgChange(randomNumber);
 }
 
 setInterval(init, 5000);
